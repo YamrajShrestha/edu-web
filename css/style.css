@@ -395,8 +395,28 @@ body {
 }
 
 .about-banner .about-shape2 {
+  display: block;
   position: absolute;
   bottom: -120px;
+  animation: bounce 2.5s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 .about-right-content .bx {
@@ -409,6 +429,17 @@ body {
   font-size: 16px;
   color: var(--eerie-black-1);
   margin-block: 15px;
+}
+
+.about-right-content {
+  position: relative;
+}
+
+.about-right-content .about-shape4 {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: -1;
 }
 
 /* #COURSE  */
@@ -436,6 +467,7 @@ body {
   color: var(--kappel);
   padding: 5px 12px;
   border-radius: 5px;
+  display: inline-block;
 }
 
 .course-card .card-title a {
@@ -493,5 +525,50 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  margin-block-start: 36px;
+  margin-block: 20px;
 }
+
+/* #VIDEO  */
+.video {
+  background-image: url(../img/video-bg.png);
+  background-position: center top;
+  background-repeat: center;
+  background-size: cover;
+  /* height: 30vh; */
+}
+
+.video {
+  position: relative;
+}
+
+.video .img-holder {
+  position: absolute;
+  top: 100px;
+  right: 550px;
+}
+
+.video .img-cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 120px;
+  position: relative;
+}
+
+.video .shape-2-ring{
+  position: absolute;
+  top: 20px;
+  right: 500px;
+}
+
+.video .img-holder .bx{
+  position: absolute;
+  background: var(--radical-red);
+  color: #fff;
+  top: 50%;left: 50%;
+  transform: translate(-50% -50%);
+}
+
+/* #STATS  */
+
