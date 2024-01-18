@@ -1,33 +1,38 @@
 /* #CUSTOM SET UP  */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap");
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
 :root {
-  --selective-yellow: hsl(42, 94%, 55%);
-  --eerie-black-1: hsl(0, 0%, 9%);
+  --kappel: #1ab79d;
+  --kappel_15: #1ab79d26;
+  --eerie-black-1: #171717;
+  --radical-red: #ee4962;
+  --gray-web: #808080;
+  --royal-purple: #4461e4;
+  --selective-yellow: #f8b720;
+
   --eerie-black-2: hsl(180, 3%, 7%);
   --quick-silver: hsl(0, 0%, 65%);
-  --radical-red: hsl(351, 83%, 61%);
   --light-gray: hsl(0, 0%, 80%);
   --isabelline: hsl(36, 33%, 94%);
   --gray-x-11: hsl(0, 0%, 73%);
-  --kappel_15: hsla(170, 75%, 41%, 0.15);
   --platinum: hsl(0, 0%, 90%);
-  --gray-web: hsl(0, 0%, 50%);
   --black_80: hsla(0, 0%, 0%, 0.8);
   --white_50: hsla(0, 0%, 100%, 0.5);
   --black_50: hsla(0, 0%, 0%, 0.5);
   --black_30: hsla(0, 0%, 0%, 0.3);
-  --kappel: hsl(170, 75%, 41%);
   --white: hsl(0, 0%, 100%);
-
-  --gradient: linear-gradient(
-    -90deg,
-    hsl(151, 58%, 46%) 0%,
-    hsl(170, 75%, 41%) 100%
-  );
 
   --ff-league_spartan: "League Spartan", sans-serif;
   --ff-poppins: "Poppins", sans-serif;
 
   --section-padding: 75px;
+
+  --gradient: linear-gradient(-90deg, #31b978 0%, #1ab79d 100%);
 
   --shadow-1: 0 6px 15px 0 hsla(0, 0%, 0%, 0.05);
   --shadow-2: 0 10px 30px hsla(0, 0%, 0%, 0.06);
@@ -56,14 +61,13 @@ img,
 span,
 data,
 input,
-button,
-ion-icon {
+button {
   display: block;
 }
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 img {
@@ -81,11 +85,413 @@ input {
   width: 100%;
 }
 
-button {
-  cursor: pointer;
+html {
+  font-family: var(--ff-poppins);
+  /* font-size: 10px; */
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--gray-web) !important;
+  font-size: 1.6rem;
+  line-height: 1.75;
 }
 
 /* #RESUSED STYLE */
 .section {
   padding-block: var(--section-padding);
+}
+
+.section-content {
+  text-align: center;
+}
+.heading {
+  color: var(--eerie-black-1);
+  font-family: var(--ff-league_spartan);
+  font-weight: 600;
+  font-size: 65px;
+}
+
+.section-title {
+  font-family: var(--ff-league_spartan);
+  font-weight: 600;
+  font-size: 45px;
+  color: var(--eerie-black-1);
+}
+.txt-md {
+  font-family: var(--ff-poppins);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.section-subtitle {
+  font-family: var(--ff-poppins);
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+/* #HEADER  */
+.nav-item .nav-link {
+  font-family: var(--ff-poppins);
+  font-weight: 500;
+}
+
+.nav-item:is(:hover, :focus) .nav-link {
+  color: var(--kappel);
+}
+
+.navbar button {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: var(--kappel);
+  border: none;
+  color: #fff;
+  font-family: var(--ff-league_spartan);
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.hero {
+  background-image: url(../img/hero-bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-content {
+  max-width: 80%;
+}
+
+.hero-content span {
+  color: var(--radical-red);
+  display: inline-block;
+}
+
+.hero button {
+  padding: 15px 30px;
+  cursor: pointer;
+  background: var(--kappel);
+  border: none;
+  color: #fff;
+  font-family: var(--ff-league_spartan);
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.shape {
+  position: relative;
+  z-index: 1;
+}
+
+.img-holder .img-cover.one {
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 110px;
+  position: absolute;
+  top: 205px;
+}
+
+.img-holder .img-cover.two {
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 90px;
+  position: absolute;
+  top: 300px;
+  right: 410px;
+  z-index: 1;
+}
+
+.img-holder .img-cover.three {
+  position: absolute;
+  top: 515px;
+  color: #ccc;
+  width: 380px;
+  height: 190px;
+  z-index: 2;
+}
+
+/* #CATEGORY  */
+.category .title-xs {
+  color: var(--radical-red);
+}
+
+.category h2 span {
+  display: inline-block;
+  color: var(--kappel);
+}
+
+.category-card.one {
+  background: var(--kappel_15);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+}
+.category-card.one .card-icon {
+  margin-block-start: 20px;
+  height: 80px;
+  width: 80px;
+  background: var(--kappel_15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.category-card.one .card-title a {
+  max-width: 60%;
+  margin: auto;
+  margin-block: 20px;
+  font-family: var(--ff-league_spartan);
+  font-weight: 500;
+  font-size: 23px;
+  color: var(--eerie-black-1) !important;
+}
+
+.category-card.one span {
+  margin-block: 20px;
+  background: var(--kappel_15);
+  padding: 5px 16px;
+  color: var(--kappel);
+  border-radius: 5px;
+}
+.category-card.two {
+  background: #feecef;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+}
+.category-card.two .card-icon {
+  margin-block-start: 20px;
+  height: 80px;
+  width: 80px;
+  background: #fddbe1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.category-card.two .card-title a {
+  max-width: 60%;
+  margin: auto;
+  margin-block: 20px;
+  font-family: var(--ff-league_spartan);
+  font-weight: 500;
+  font-size: 23px;
+  color: var(--eerie-black-1) !important;
+}
+
+.category-card.two span {
+  margin-block: 20px;
+  background: #fddbe1;
+  padding: 5px 16px;
+  color: var(--radical-red);
+  border-radius: 5px;
+}
+.category-card.three {
+  background: #eceffd;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+}
+.category-card.three .card-icon {
+  margin-block-start: 20px;
+  height: 80px;
+  width: 80px;
+  background: #dbe1fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.category-card.three .card-title a {
+  max-width: 60%;
+  margin: auto;
+  margin-block: 20px;
+  font-family: var(--ff-league_spartan);
+  font-weight: 500;
+  font-size: 23px;
+  color: var(--eerie-black-1) !important;
+}
+
+.category-card.three span {
+  margin-block: 20px;
+  background: #dbe1fb;
+  padding: 5px 16px;
+  color: var(--royal-purple);
+  border-radius: 5px;
+}
+.category-card.four {
+  background: #fff8e8;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+}
+.category-card.four .card-icon {
+  margin-block-start: 20px;
+  height: 80px;
+  width: 80px;
+  background: #fff2d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.category-card.four .card-title a {
+  max-width: 80%;
+  margin: auto;
+  margin-block: 20px;
+  font-family: var(--ff-league_spartan);
+  font-weight: 500;
+  font-size: 23px;
+  color: var(--eerie-black-1) !important;
+}
+
+.category-card.four span {
+  margin-block: 20px;
+  background: #fff2d3;
+  padding: 5px 16px;
+  color: var(--selective-yellow);
+  border-radius: 5px;
+}
+
+/* #ABOUT  */
+.about-banner {
+  background-image: url(../img/about-shape-3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 53vh;
+}
+
+.about-banner .img-holder {
+  position: absolute;
+  top: 80px;
+  left: 120px;
+}
+
+.about-banner .img-cover {
+  border-radius: 5px;
+}
+
+.about-banner .about-shape1 {
+  position: absolute;
+  right: -180px;
+}
+
+.about-banner .about-shape2 {
+  position: absolute;
+  bottom: -120px;
+}
+
+.about-right-content .bx {
+  color: var(--selective-yellow);
+}
+
+.about-right-content ul li {
+  font-family: var(--ff-league_spartan);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--eerie-black-1);
+  margin-block: 15px;
+}
+
+/* #COURSE  */
+.course {
+  background: #f5f1eb;
+  position: relative;
+}
+
+.course-card {
+  position: relative;
+}
+
+.course-card .card-badge {
+  position: absolute;
+  background: #f8b720;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 5px;
+  top: 10px;
+  right: 10px;
+}
+
+.course-card .card-btn {
+  background: var(--kappel_15);
+  color: var(--kappel);
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+
+.course-card .card-title a {
+  color: var(--eerie-black-1);
+  margin-block: 10px 12px;
+}
+
+.course-card .card-title:is(:hover, :focus-within) a {
+  color: var(--kappel);
+}
+
+.course-card .rating span {
+  display: inline-block;
+  color: var(--eerie-black-1);
+  font-family: var(--ff-poppins);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.course-card .price {
+  color: var(--radical-red);
+  font-family: var(--ff-league_spartan);
+  font-weight: 600;
+  font-size: 18px;
+  margin-block: 10px 12px;
+}
+
+.rating .bx {
+  color: var(--selective-yellow);
+}
+
+.course-card .img-holder {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.course-card .img-cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.course-card:is(:hover, :focus-within) .img-cover {
+  transform: scale(1.08);
+}
+
+.course button {
+  padding: 15px 30px;
+  background: var(--kappel);
+  color: #fff;
+  border-radius: 5px;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-block-start: 36px;
 }
