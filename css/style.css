@@ -452,6 +452,11 @@ body {
   position: relative;
 }
 
+.course-card .card-content{
+  padding-inline: 15px;
+  padding-block-end: 15px;
+}
+
 .course-card .card-badge {
   position: absolute;
   background: #f8b720;
@@ -556,19 +561,242 @@ body {
   position: relative;
 }
 
-.video .shape-2-ring{
+.video .shape-2-ring {
   position: absolute;
   top: 20px;
   right: 500px;
 }
 
-.video .img-holder .bx{
+.video .img-holder .bx {
   position: absolute;
   background: var(--radical-red);
   color: #fff;
-  top: 50%;left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50% -50%);
 }
 
 /* #STATS  */
+.stats-card {
+  text-align: center;
+  padding: 40px 60px;
+  border-radius: 10px;
+}
 
+.stats-card :is(.card-title, .card-text) {
+  font-family: var(--ff-league_spartan);
+}
+
+.stats-card .card-title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.1;
+}
+
+.stats-card .card-text {
+  color: var(--eerie-black-1);
+  text-transform: uppercase;
+}
+
+.stats-card.one {
+  background: var(--kappel_15);
+}
+
+.stats-card .card-title.one {
+  color: var(--kappel);
+}
+.stats-card.two {
+  background: #feecef;
+}
+
+.stats-card .card-title.two {
+  color: var(--radical-red);
+}
+.stats-card.three {
+  background: #f4eeff;
+}
+
+.stats-card .card-title.three {
+  color: #8f57ff;
+}
+.stats-card.four {
+  background: #fff8e8;
+}
+
+.stats-card .card-title.four {
+  color: var(--selective-yellow);
+}
+
+/* #BLOG  */
+.blog {
+  background-image: url(../img/blog-bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+
+.blog .blog-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.blog-card {
+  margin-block: 30px;
+}
+.blog-card .img-holder {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.blog-card .img-cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-2);
+}
+
+.blog-card:is(:hover, :focus-within) .img-holder .img-cover {
+  transform: scale(1.1);
+}
+
+.blog-card .card-content {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-block-start: -100px;
+  margin-inline: 15px;
+}
+
+.blog-card .card-btn {
+  position: absolute;
+  top: -40px;
+  right: 30px;
+  transition: var(--transition-1);
+  opacity: 0;
+}
+
+.card-btn .bx {
+  background: var(--kappel);
+  color: #fff;
+  border: transparent;
+  padding: 20px;
+}
+
+.card-btn .bx:is(:hover, :focus) {
+  background-color: var(--radical-red);
+}
+
+.blog-card :is(:hover, :focus-within) .card-btn {
+  opacity: 1;
+  transform: translateY(10px);
+}
+
+.blog-card .card-subtitle {
+  font-family: var(--ff-poppins);
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.blog-card .card-title {
+  font-family: var(--ff-league_spartan);
+  font-weight: 500;
+  font-size: 23px;
+  color: var(--eerie-black-1);
+  margin-block: 10px 15px;
+  max-width: 80%;
+}
+
+.blog-card .card-title:is(:hover, :focus) {
+  color: var(--kappel);
+}
+.blog-card .card-meta-item {
+  font-family: var(--ff-poppins);
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--eerie-black-1);
+  margin-block-end: 15px;
+}
+
+.card-meta-item .bx {
+  color: var(--kappel);
+}
+
+/* #FOOTER  */
+footer {
+  background-image: url(../img/footer-bg.png);
+  background-color: #111212;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 40vh; */
+  color: #ccc;
+}
+
+footer .logo {
+  margin-block-end: 20px;
+}
+
+footer ul {
+  padding-inline-start: 0;
+}
+
+footer li {
+  margin-block: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer .bx {
+  background-color: #ccc;
+  color: #00000094;
+}
+
+footer li:is(:hover, :focus) .bx {
+  color: #fff;
+  background: var(--kappel);
+  border: transparent;
+}
+footer a {
+  color: #ccc;
+}
+
+footer li:is(:hover, :focus) a {
+  color: var(--kappel);
+}
+
+footer .text {
+  font-family: var(--ff-league_spartan);
+  font-weight: 600;
+  font-size: 23px;
+}
+
+footer button {
+  background-color: var(--kappel);
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: transparent;
+  display: flex;
+  align-items: center;
+}
+footer button .bx {
+  color: #fff;
+  background-color: var(--kappel);
+}
+
+footer .social-icons {
+  margin-block-start: 20px;
+  display: flex;
+  gap: 10px;
+}
+footer .social-icons .bx:is(:hover, :focus) {
+  background-color: var(--kappel);
+  color: #fff;
+}
