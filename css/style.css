@@ -796,7 +796,24 @@ footer .social-icons {
   display: flex;
   gap: 10px;
 }
+
 footer .social-icons .bx:is(:hover, :focus) {
   background-color: var(--kappel);
+  color: #fff;
+}
+
+/* BACK TO TOP  */
+.back-to-top.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-10px);
+}
+.back-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+}
+.back-to-top .bx {
+  background: var(--kappel);
   color: #fff;
 }
